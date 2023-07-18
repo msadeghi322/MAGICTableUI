@@ -1,0 +1,29 @@
+
+
+Python problems and bugs:
+
+1. recorded video is slow in playback
+
+2. if the ball is dropped multiple times in a given trial, only the last time will be saved: 
+because the file names only differ in trial number and ballescape flag, if the trial is the 
+same and ball is escaped multiple times, each time the data will be rewriten. We can hope no 
+one drops the ball twice
+
+
+import cv2
+import time
+
+
+print('starting now .......')
+vid = cv2.VideoCapture(1)
+d = 0
+ret, frame = vid.read()
+
+while d<10:
+    ret, frame = vid.read()
+    filename = "file_%d.jpg"%d
+    cv2.imwrite(filename, frame)
+    d+=1
+    time.sleep(1)
+
+

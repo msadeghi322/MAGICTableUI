@@ -1,0 +1,7 @@
+*.pyc
+Output/
+locale/
+Extra/
+venv/
+venv1/
+.idea/
