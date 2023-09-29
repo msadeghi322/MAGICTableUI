@@ -1,4 +1,4 @@
-__author__ = 'wonjoonsohn'
+
 
 # -*- coding: utf-8 -*-
 
